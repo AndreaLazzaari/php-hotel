@@ -67,11 +67,11 @@ $hotels = [
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td><?php echo $hotel['name']; ?></td>
-                    <td><?php echo $hotel['description']; ?></td>
-                    <td><?php echo $hotel['parking']; ?></td>
-                    <td><?php echo $hotel['vote']; ?></td>
-                    <td><?php echo $hotel['distance_to_center']; ?></td>
+                    <td><?php echo $hotels[0]['name']; ?></td>
+                    <td><?php echo $hotels[0]['description']; ?></td>
+                    <td><?php echo $hotels[0]['parking']; ?></td>
+                    <td><?php echo $hotels[0]['vote']; ?></td>
+                    <td><?php echo $hotels[0]['distance_to_center']; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
