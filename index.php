@@ -66,11 +66,11 @@ $hotels = [
             <thead>
                 <tr>
                 <?php 
-                    foreach ($hotel as $key) { ?>
-                        <th scope="col"><?php echo $key[0]; ?></th>
-                        <th scope="col">First</th>
+                    foreach ($hotel as $key => $value) { ?>
+                        <th scope="col"><?php echo $key; ?></th>
+                        <!-- <th scope="col">First</th>
                         <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Handle</th> -->
                     <?php } ?>
                 </tr>
 
@@ -80,9 +80,9 @@ $hotels = [
                     <th scope="row">1</th>
                     <td><?php echo $hotel['name']; ?></td>
                     <td><?php echo $hotel['description']; ?></td>
-                    <td>@<?php echo $hotel['parking']; ?></td>
-                    <td>@<?php echo $hotel['vote']; ?></td>
-                    <td>@<?php echo $hotel['distance_to_center']; ?></td>
+                    <td><?php echo $hotel['parking']; ?></td>
+                    <td><?php echo $hotel['vote']; ?></td>
+                    <td><?php echo $hotel['distance_to_center']; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
