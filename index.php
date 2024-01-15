@@ -55,6 +55,8 @@ $hotels = [
         echo $hotel['name'] . ' - ' . $hotel['description'] . ', ' . $hotel['parking'] . ', ' . $hotel['vote'] . ', ' . $hotel['distance_to_center'] . ' ';
     }
 
+
+    var_dump($hotels);
     ?>
 
 
@@ -63,24 +65,25 @@ $hotels = [
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                <?php 
+                    foreach ($hotels as $hotel) { ?>
+                        <th scope="col"><?php echo $hotel[$key]; ?></th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    <?php } ?>
                 </tr>
 
             </thead>
             <tbody>
                 <tr>
-                <?php 
-                    foreach ($hotels as $hotel) { ?>
                     <th scope="row">1</th>
-                        <td scope="col"><?php echo $hotel[0]['name']; ?></td>
-                        <td scope="col"><?php echo $hotel[0]['description']; ?></td>
-                        <td scope="col"><?php echo $hotel[0]['parking']; ?></td>
-                        <td scope="col"><?php echo $hotel[0]['vote']; ?></td>
-                        <td scope="col"><?php echo $hotel['distance_to_center']; ?></td>
-                    <?php } ?> 
+                    <td><?php echo $hotel['name']; ?></td>
+                    <td><?php echo $hotel['description']; ?></td>
+                    <td>@<?php echo $hotel['parking']; ?></td>
+                    <td>@<?php echo $hotel['vote']; ?></td>
+                    <td>@<?php echo $hotel['distance_to_center']; ?></td>
+                </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>Jacob</td>
@@ -109,3 +112,12 @@ $hotels = [
 </body>
 
 </html>
+
+                <!-- <?php 
+                         foreach ($hotels as $hotel) { ?>
+                        <td scope="col"><?php echo $hotel['name']; ?></td>
+                        <td scope="col"><?php echo $hotel['description']; ?></td>
+                        <td scope="col"><?php echo $hotel['parking']; ?></td>
+                        <td scope="col"><?php echo $hotel['vote']; ?></td>
+                        <td scope="col"><?php echo $hotel['distance_to_center']; ?></td>
+                    <?php } ?>  -->
