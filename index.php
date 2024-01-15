@@ -50,13 +50,6 @@ $hotels = [
             'distance_to_center' => 50
         ],
     ];
-
-    foreach ($hotels as $hotel){
-        echo $hotel['name'] . ' - ' . $hotel['description'] . ', ' . $hotel['parking'] . ', ' . $hotel['vote'] . ', ' . $hotel['distance_to_center'] . ' ';
-    }
-
-
-    var_dump($hotels);
     ?>
 
 
@@ -66,14 +59,10 @@ $hotels = [
             <thead>
                 <tr>
                 <?php 
-                    foreach ($hotel as $key => $value) { ?>
+                    foreach ($hotels[0] as $key => $value) { ?>
                         <th scope="col"><?php echo $key; ?></th>
-                        <!-- <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th> -->
                     <?php } ?>
                 </tr>
-
             </thead>
             <tbody>
                 <tr>
@@ -86,14 +75,35 @@ $hotels = [
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td><?php echo $hotels[1]['name']; ?></td>
+                    <td><?php echo $hotels[1]['description']; ?></td>
+                    <td><?php echo $hotels[1]['parking']; ?></td>
+                    <td><?php echo $hotels[1]['vote']; ?></td>
+                    <td><?php echo $hotels[1]['distance_to_center']; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td><?php echo $hotels[2]['name']; ?></td>
+                    <td><?php echo $hotels[2]['description']; ?></td>
+                    <td><?php echo $hotels[2]['parking']; ?></td>
+                    <td><?php echo $hotels[2]['vote']; ?></td>
+                    <td><?php echo $hotels[2]['distance_to_center']; ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><?php echo $hotels[3]['name']; ?></td>
+                    <td><?php echo $hotels[3]['description']; ?></td>
+                    <td><?php echo $hotels[3]['parking']; ?></td>
+                    <td><?php echo $hotels[3]['vote']; ?></td>
+                    <td><?php echo $hotels[3]['distance_to_center']; ?></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td><?php echo $hotels[4]['name']; ?></td>
+                    <td><?php echo $hotels[4]['description']; ?></td>
+                    <td><?php echo $hotels[4]['parking']; ?></td>
+                    <td><?php echo $hotels[4]['vote']; ?></td>
+                    <td><?php echo $hotels[4]['distance_to_center']; ?></td>
                 </tr>
             </tbody>
         </table>
@@ -113,11 +123,4 @@ $hotels = [
 
 </html>
 
-                <!-- <?php 
-                         foreach ($hotels as $hotel) { ?>
-                        <td scope="col"><?php echo $hotel['name']; ?></td>
-                        <td scope="col"><?php echo $hotel['description']; ?></td>
-                        <td scope="col"><?php echo $hotel['parking']; ?></td>
-                        <td scope="col"><?php echo $hotel['vote']; ?></td>
-                        <td scope="col"><?php echo $hotel['distance_to_center']; ?></td>
-                    <?php } ?>  -->
+    
