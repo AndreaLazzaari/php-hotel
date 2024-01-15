@@ -66,8 +66,8 @@ $hotels = [
             <thead>
                 <tr>
                 <?php 
-                    foreach ($hotels as $hotel) { ?>
-                        <th scope="col"><?php echo $hotel[$key]; ?></th>
+                    foreach ($hotel as $key) { ?>
+                        <th scope="col"><?php echo $key[0]; ?></th>
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
                         <th scope="col">Handle</th>
